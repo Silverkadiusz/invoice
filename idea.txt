@@ -1,0 +1,40 @@
+frontend/
+│── src/
+│   ├── app/
+│   │   ├── auth/
+│   │   │   ├── login/
+│   │   │   │   ├── login.component.ts
+│   │   │   │   ├── login.component.html
+│   │   │   │   ├── login.component.scss
+│   │   │   ├── register/
+│   │   │   │   ├── register.component.ts
+│   │   │   │   ├── register.component.html
+│   │   │   │   ├── register.component.scss
+│   │   │   ├── services/
+│   │   │   │   ├── auth.service.ts
+│   │   │   ├── auth.module.ts
+│   │   │   ├── auth-routing.module.ts
+│   │   ├── dashboard/
+│   │   │   ├── dashboard.component.ts
+│   │   │   ├── dashboard.component.html
+│   │   │   ├── dashboard.component.scss
+│   │   │   ├── services/
+│   │   │   │   ├── dashboard.service.ts
+│   │   │   ├── dashboard.module.ts
+│   │   │   ├── dashboard-routing.module.ts
+│   │   ├── shared/
+│   │   │   ├── navbar/
+│   │   │   │   ├── navbar.component.ts
+│   │   │   │   ├── navbar.component.html
+│   │   │   │   ├── navbar.component.scss
+│   │   ├── app.module.ts
+│   │   ├── app-routing.module.ts
+│   ├── assets/
+│   ├── index.html
+│   ├── main.ts
+│   ├── styles.scss
+│   ├── environments/
+│   │   ├── environment.ts
+│   │   ├── environment.prod.ts
+│── angular.json
+│── package.json
