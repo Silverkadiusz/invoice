@@ -1,0 +1,30 @@
+<p-card header="Logowanie">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div class="p-field">
+            <label for="email">Email</label>
+            <input id="email" type="text" pInputText formControlName="email">
+            <small class="error" *ngIf="loginForm.controls.email.invalid && loginForm.controls.email.touched">
+                Podaj poprawny adres email!
+            </small>
+        </div>
+
+        <div class="p-field">
+            <label for="password">Hasło</label>
+            <input id="password" type="password" pInputText formControlName="password">
+            <small class="error" *ngIf="loginForm.controls.password.invalid && loginForm.controls.password.touched">
+                Hasło musi mieć min. 6 znaków!
+            </small>
+        </div>
+
+        <button type="submit" pButton label="Zaloguj się" class="p-button-primary" [disabled]="loginForm.invalid || isLoading"></button>
+
+        <p-progressSpinner *ngIf="isLoading"></p-progressSpinner>
+
+        <p-message severity="error" *ngIf="errorMessage">{{ errorMessage }}</p-message>
+    </form>
+</p-card>
+
+<div class="register-link">
+    <p>Nie masz konta? <a routerLink="/auth/register">Zarejestruj się</a></p>
+</div>

@@ -1,0 +1,39 @@
+<p-card header="Rejestracja">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+        <div class="p-field">
+            <label for="email">Email</label>
+            <input id="email" type="text" pInputText formControlName="email">
+            <small class="error" *ngIf="registerForm.controls.email.invalid && registerForm.controls.email.touched">
+                Podaj poprawny adres email!
+            </small>
+        </div>
+
+        <div class="p-field">
+            <label for="password">Hasło</label>
+            <input id="password" type="password" pInputText formControlName="password">
+            <small class="error" *ngIf="registerForm.controls.password.invalid && registerForm.controls.password.touched">
+                Hasło musi mieć min. 6 znaków!
+            </small>
+        </div>
+
+        <div class="p-field">
+            <label for="confirmPassword">Potwierdź hasło</label>
+            <input id="confirmPassword" type="password" pInputText formControlName="confirmPassword">
+            <small class="error" *ngIf="registerForm.hasError('mismatch') && registerForm.controls.confirmPassword.touched">
+                Hasła muszą być identyczne!
+            </small>
+        </div>
+
+        <button type="submit" pButton label="Zarejestruj się" class="p-button-primary" [disabled]="registerForm.invalid || isLoading"></button>
+
+        <p-progressSpinner *ngIf="isLoading"></p-progressSpinner>
+
+        <p-message severity="error" *ngIf="errorMessage">{{ errorMessage }}</p-message>
+        <p-message severity="success" *ngIf="successMessage">{{ successMessage }}</p-message>
+    </form>
+</p-card>
+
+<div class="login-link">
+    <p>Masz już konto? <a routerLink="/auth/login">Zaloguj się</a></p>
+</div>

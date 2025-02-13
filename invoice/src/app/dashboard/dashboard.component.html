@@ -1,0 +1,23 @@
+<div class="dashboard-container">
+    <p-card header="Podsumowanie Finansowe">
+        <div class="summary">
+            <p><strong>Dzisiaj:</strong> {{ financialSummary?.today | currency }}</p>
+            <p><strong>Ostatnie 7 dni:</strong> {{ financialSummary?.week | currency }}</p>
+            <p><strong>Bieżący miesiąc:</strong> {{ financialSummary?.month | currency }}</p>
+            <p><strong>Obecny rok:</strong> {{ financialSummary?.year | currency }}</p>
+        </div>
+    </p-card>
+
+    <p-card header="Szybkie akcje">
+        <div class="actions">
+            <button pButton label="Nowa Faktura" icon="pi pi-file" class="p-button-success"></button>
+            <button pButton label="Nowa Proforma" icon="pi pi-file-o" class="p-button-info"></button>
+            <button pButton label="Nowa Korekta" icon="pi pi-refresh" class="p-button-warning"></button>
+            <button pButton label="Nowy Wydatek" icon="pi pi-money-bill" class="p-button-danger"></button>
+        </div>
+    </p-card>
+
+    <p-card header="Wykres Przychodów">
+        <p-chart type="line" [data]="chartData"></p-chart>
+    </p-card>
+</div>

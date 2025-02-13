@@ -1,0 +1,22 @@
+<nav class="navbar">
+    <div class="logo">
+        <span class="app-title">eKsięgowa</span>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" pInputText [(ngModel)]="searchQuery" placeholder="Szukaj faktury...">
+        <button pButton icon="pi pi-search" (click)="searchInvoices()"></button>
+    </div>
+
+    <div class="notifications">
+        <button pButton icon="pi pi-bell" class="p-button-rounded p-button-warning">
+            <span *ngIf="notifications > 0" class="notification-badge">{{ notifications }}</span>
+        </button>
+    </div>
+
+    <div class="user-menu">
+        <p-avatar icon="pi pi-user" shape="circle"></p-avatar>
+        <span class="user-name">{{ userName }}</span>
+        <button pButton label="Wyloguj" class="p-button-danger" (click)="logout()"></button>
+    </div>
+</nav>

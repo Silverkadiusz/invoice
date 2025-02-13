@@ -1,40 +1,35 @@
 frontend/
 │── src/
 │   ├── app/
-│   │   ├── auth/
+│   │   ├── auth/                   # Moduł logowania/rejestracji
 │   │   │   ├── login/
 │   │   │   │   ├── login.component.ts
 │   │   │   │   ├── login.component.html
-│   │   │   │   ├── login.component.scss
 │   │   │   ├── register/
 │   │   │   │   ├── register.component.ts
 │   │   │   │   ├── register.component.html
-│   │   │   │   ├── register.component.scss
-│   │   │   ├── services/
-│   │   │   │   ├── auth.service.ts
+│   │   │   |── services/
+│   │   │   |    │── auth.service.ts
 │   │   │   ├── auth.module.ts
 │   │   │   ├── auth-routing.module.ts
-│   │   ├── dashboard/
+│   │   ├── dashboard/               # Moduł dashboardu
 │   │   │   ├── dashboard.component.ts
 │   │   │   ├── dashboard.component.html
-│   │   │   ├── dashboard.component.scss
-│   │   │   ├── services/
-│   │   │   │   ├── dashboard.service.ts
 │   │   │   ├── dashboard.module.ts
 │   │   │   ├── dashboard-routing.module.ts
-│   │   ├── shared/
-│   │   │   ├── navbar/
+│   │   ├── shared/                   # Wspólne komponenty
+│   │   │   ├── navbar/               # Toolbar
 │   │   │   │   ├── navbar.component.ts
 │   │   │   │   ├── navbar.component.html
 │   │   │   │   ├── navbar.component.scss
-│   │   ├── app.module.ts
-│   │   ├── app-routing.module.ts
-│   ├── assets/
-│   ├── index.html
-│   ├── main.ts
-│   ├── styles.scss
-│   ├── environments/
-│   │   ├── environment.ts
-│   │   ├── environment.prod.ts
-│── angular.json
-│── package.json
+│   │   ├── app.component.ts          # Główna aplikacja Angular
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.module.ts              # Moduł główny
+│   │   ├── app-routing.module.ts      # Routing globalny
+│   ├── assets/                         # Ikony, style, obrazy
+│   ├── index.html                      # Główny plik HTML
+│   ├── main.ts                         # Punkt startowy Angulara
+│   ├── styles.scss                     # Globalne style aplikacji
+│── angular.json                         # Konfiguracja Angulara
+│── package.json                         # Zależności Angulara

@@ -1,0 +1,27 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.summary {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  width: 150px;
+}
+
+p-chart {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
