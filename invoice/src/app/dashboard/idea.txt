@@ -18,3 +18,5 @@ src/app/dashboard/
 │   │── quick-actions.component.scss
 │── dashboard.module.ts          # Moduł dashboardu
 │── dashboard-routing.module.ts  # Routing dashboardu
+
+
