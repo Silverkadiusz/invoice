@@ -1,0 +1,20 @@
+src/app/dashboard/
+│── dashboard.component.ts      # Logika dashboardu
+│── dashboard.component.html    # Widok HTML
+│── dashboard.component.scss    # Style
+│── services/
+│   │── dashboard.service.ts    # Pobieranie danych z backendu
+│── charts/
+│   │── invoices-chart.component.ts    # Wykresy faktur
+│   │── invoices-chart.component.html
+│   │── invoices-chart.component.scss
+│── invoices-list/
+│   │── invoices-list.component.ts    # Tabela faktur
+│   │── invoices-list.component.html
+│   │── invoices-list.component.scss
+│── quick-actions/
+│   │── quick-actions.component.ts    # Szybkie akcje
+│   │── quick-actions.component.html
+│   │── quick-actions.component.scss
+│── dashboard.module.ts          # Moduł dashboardu
+│── dashboard-routing.module.ts  # Routing dashboardu
